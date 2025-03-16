@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+						http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+	version="4.0" metadata-complete="true">
+	
+	<!-- 商品一覧ページ用Servletの定義・URL紐付け -->
+	<servlet>
+		<servlet-name>list_servlet</servlet-name>
+		<servlet-class>servlet.DispListServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>list_servlet</servlet-name>
+		<url-pattern>/list</url-pattern>
+	</servlet-mapping>
+	
+	<!-- 商品登録ページ用Servletの定義・URL紐付け -->
+	<servlet>
+		<servlet-name>register_servlet</servlet-name>
+		<servlet-class>servlet.DispRegisterServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>register_servlet</servlet-name>
+		<url-pattern>/register</url-pattern>
+	</servlet-mapping>
+	
+	<!-- 商品編集ページ用Servletの定義・URL紐付け -->
+	<servlet>
+		<servlet-name>edit_servlet</servlet-name>
+		<servlet-class>servlet.DispEditServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>edit_servlet</servlet-name>
+		<url-pattern>/edit</url-pattern>
+	</servlet-mapping>
+	
+	<!-- 追加機能用Servletの定義・URL紐付け -->
+	<servlet>
+		<servlet-name>create_servlet</servlet-name>
+		<servlet-class>servlet.ExecCreateServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>create_servlet</servlet-name>
+		<url-pattern>/create</url-pattern>
+	</servlet-mapping>
+	
+	<!-- 更新機能用Servletの定義・URL紐付け -->
+	<servlet>
+		<servlet-name>update_servlet</servlet-name>
+		<servlet-class>servlet.ExecUpdateServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>update_servlet</servlet-name>
+		<url-pattern>/update</url-pattern>
+	</servlet-mapping>
+	
+	<!-- 削除機能用Servletの定義・URL紐付け -->
+	<servlet>
+		<servlet-name>delete_servlet</servlet-name>
+		<servlet-class>servlet.ExecDeleteServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>delete_servlet</servlet-name>
+		<url-pattern>/delete</url-pattern>
+	</servlet-mapping>
+	
+	<!-- ウェルカムファイルの設定 -->
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+	
+</web-app>
